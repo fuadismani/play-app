@@ -41,7 +41,7 @@ public class addFocusController : MonoBehaviour
         }
         else
         {
-            // to check if any devices doesn't support the autofocus function
+            // to check if any devices doesn't support autofocus function
             Debug.Log("this device doesn't support autofocus function");
         }
     }
