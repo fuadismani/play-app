@@ -3,7 +3,12 @@ guid: 0c688469da0ae4a988640b9c9bebde3c
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cornet
+    second: {fileID: 2800000, guid: 84e212900a3a1416ba397ec92a2b419c, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
