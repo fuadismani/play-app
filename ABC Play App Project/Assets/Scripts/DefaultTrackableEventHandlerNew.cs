@@ -219,7 +219,7 @@ public class DefaultTrackableEventHandlerNew : MonoBehaviour
 
             if (mTrackableBehaviour.TrackableName == "Target_G")
             {
-                playSound("Audio/grapes");
+                playSound("Audio/guitar");
             }
 
             if (mTrackableBehaviour.TrackableName == "Target_H")
@@ -239,7 +239,7 @@ public class DefaultTrackableEventHandlerNew : MonoBehaviour
 
             if (mTrackableBehaviour.TrackableName == "Target_K")
             {
-                playSound("Audio/kite");
+                playSound("Audio/kettle");
             }
 
             if (mTrackableBehaviour.TrackableName == "Target_L")
@@ -249,12 +249,12 @@ public class DefaultTrackableEventHandlerNew : MonoBehaviour
 
             if (mTrackableBehaviour.TrackableName == "Target_M")
             {
-                playSound("Audio/mango");
+                playSound("Audio/motorcycle");
             }
 
             if (mTrackableBehaviour.TrackableName == "Target_N")
             {
-                playSound("Audio/nest");
+                playSound("Audio/newspaper");
             }
 
             if (mTrackableBehaviour.TrackableName == "Target_O")
@@ -309,7 +309,7 @@ public class DefaultTrackableEventHandlerNew : MonoBehaviour
 
             if (mTrackableBehaviour.TrackableName == "Target_Y")
             {
-                playSound("Audio/yo-yo");
+                playSound("Audio/yacht");
             }
 
             if (mTrackableBehaviour.TrackableName == "Target_Z")

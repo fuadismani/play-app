@@ -6,7 +6,17 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Milk
+    second: {fileID: 2100000, guid: d93e2bda218eb40ba8992ee8c5cd548d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Porcelain white
+    second: {fileID: 2100000, guid: 3cde450731a634fffb68bc4040987eca, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
