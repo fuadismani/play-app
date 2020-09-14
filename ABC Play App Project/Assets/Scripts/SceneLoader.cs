@@ -15,5 +15,29 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    
+
+    public void GoToARCamera()
+    {
+        SceneManager.LoadScene("ARCamera");
+    }
+
+    public void GoToVideo()
+    {
+        SceneManager.LoadScene("Video");
+    }
+
+    public void GoToHowTo()
+    {
+        SceneManager.LoadScene("HowTo");
+    }
+
+    public void GoToAbout()
+    {
+        SceneManager.LoadScene("About");
+    }
+
+    public void OpenCard()
+    {
+        Application.OpenURL("https://bit.ly/35xwues");
+    }
 }

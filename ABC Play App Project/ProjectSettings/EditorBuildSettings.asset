@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Warning.unity
     guid: 712febae66c0b4002ae2247113a6fcbc
   - enabled: 1
-    path: Assets/Scenes/ARCamera.unity
-    guid: 69512c786e67147f1b08c1622dc28146
-  - enabled: 1
     path: Assets/Scenes/Dashboard.unity
     guid: c3660bf9694884300a853a3135fca6a9
   - enabled: 1
+    path: Assets/Scenes/ARCamera.unity
+    guid: 69512c786e67147f1b08c1622dc28146
+  - enabled: 1
+    path: Assets/Scenes/Video.unity
+    guid: 97b9786559d6a4340ae2ffdad4672b49
+  - enabled: 1
     path: Assets/Scenes/HowTo.unity
     guid: 1e2e8da200f1f43da9ed877512788e3f
+  - enabled: 1
+    path: Assets/Scenes/About.unity
+    guid: ed540221b9efe4df19cb4ef5efa2a998
   m_configObjects: {}
