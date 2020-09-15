@@ -5,11 +5,12 @@ using UnityEngine.Video;
 
 public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
+
+
     [SerializeField]
     private VideoPlayer videoPlayer;
-
     private Image progress;
-    
+
     private void Awake()
     {
         progress = GetComponent<Image>();
@@ -18,7 +19,9 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
     private void Update()
     {
         if (videoPlayer.frameCount > 0)
-            progress.fillAmount = (float)videoPlayer.frame / (float)videoPlayer.frameCount;
+        {
+            progress.fillAmount = (float)videoPlayer.frame / videoPlayer.frameCount;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
