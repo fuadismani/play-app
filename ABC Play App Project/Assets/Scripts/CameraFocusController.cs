@@ -1,48 +1,32 @@
-﻿using System.Collections;
-using UnityEngine;
-using Vuforia; 
+﻿using UnityEngine;
+using System.Collections;
+using Vuforia;
 
 public class CameraFocusController : MonoBehaviour
 {
-    private bool mVuforiaStarted = false;
 
+    // code from  Vuforia Developer Library
+    // https://library.vuforia.com/articles/Solution/Camera-Focus-Modes
     void Start()
     {
-        VuforiaARController vuforia = VuforiaARController.Instance;
-
-        if (vuforia != null)
-            vuforia.RegisterVuforiaStartedCallback(StartAfterVuforia);
+        var vuforia = VuforiaARController.Instance;
+        vuforia.RegisterVuforiaStartedCallback(OnVuforiaStarted);
+        vuforia.RegisterOnPauseCallback(OnPaused);
     }
 
-    private void StartAfterVuforia()
+    private void OnVuforiaStarted()
     {
-        mVuforiaStarted = true;
-        SetAutofocus();
+        CameraDevice.Instance.SetFocusMode(
+            CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
     }
 
-    void OnApplicationPause(bool pause)
+    private void OnPaused(bool paused)
     {
-        if (!pause)
+        if (!paused) // resumed
         {
-            // App resumed
-            if (mVuforiaStarted)
-            {
-                // App resumed and vuforia already started
-                SetAutofocus(); // This is done because some android devices lose the auto focus after resume
-            }
-        }
-    }
-
-    private void SetAutofocus()
-    {
-        if (CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO))
-        {
-            Debug.Log("Autofocus set");
-        }
-        else
-        {
-            // to check if any devices doesn't support autofocus function
-            Debug.Log("this device doesn't support autofocus function");
+            // Set again autofocus mode when app is resumed
+            CameraDevice.Instance.SetFocusMode(
+               CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
         }
     }
 }
